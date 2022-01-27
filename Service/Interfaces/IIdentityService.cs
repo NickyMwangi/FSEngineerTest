@@ -1,0 +1,23 @@
+﻿
+using Core.Entities;
+using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
+
+namespace Service.Interfaces
+{
+
+    public interface IIdentityService
+    {
+        Task<bool> IsRoleExistsAsync(string roleName);
+        Task<IdentityRole> GetRoleAsync(string roleName);
+        Task<IdentityResult> CreateRoleAsync(string roleName);
+        Task<IdentityResult> UpdateRoleAsync(string roleName);
+        Task<IList<Claim>> GetRoleClaimsAsync(string roleId);
+        Task<IdentityResult> CreateRoleClaimAsync(string roleName, string claimType, string claimValue);
+        Task<IdentityResult> AddUserRoleAsync(string userId, string roleName);
+        Task<IList<string>> GetUserRolesAsync(string userId);
+        Task<IEnumerable<ApplicationMenu>> GetMenusInfo(string userId);
+    }
+}

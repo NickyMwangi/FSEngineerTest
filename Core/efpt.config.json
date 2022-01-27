@@ -1,0 +1,145 @@
+﻿{
+   "ContextClassName": "NicozaContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": "Entities",
+   "OutputContextPath": null,
+   "OutputPath": null,
+   "ProjectRootNamespace": "Core",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ApplicationMenus]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AspNetRoleClaims]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AspNetRoles]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AspNetUserClaims]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AspNetUserLogins]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AspNetUserRoles]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AspNetUsers]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AspNetUserTokens]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AttributeSetOptions]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[AttributeSets]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Brands]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Categories]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Companies]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[CompanyContacts]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Countries]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[FileContents]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[FileFolders]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[FileStores]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[GeneralSettings]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[LookUps]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[OnlineOrderItems]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[OnlineOrders]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[PaymentMethods]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ProductAttributes]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ProductImages]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ProductRelated]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ProductReview]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Products]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ReturnRequests]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ScheduledEmails]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNodaTime": false,
+   "UseSpatial": false,
+   "UseStoredProcedures": false
+}
