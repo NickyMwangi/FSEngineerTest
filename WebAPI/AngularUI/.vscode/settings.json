@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/76c04ae8-dd9a-4443-969f-a49e52612538/resourceGroups/InterviewTasks/providers/Microsoft.Web/sites/SovTechTaskSPA",
+    "appService.deploySubpath": "dist\\AngularUI"
+}
