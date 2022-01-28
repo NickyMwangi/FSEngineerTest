@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {SessionData} from '../../iModels/iuser-model';
 import {EventService} from '../../services/event.service';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -31,11 +32,11 @@ export class AuthService {
   login(Email: string, Password: string) {
     this.http.post(this.n.LOGIN_URL, { Email, Password }, this.httpOptions)
       .subscribe((n: SessionData) => {
-      console.log(n);
-      this.userModel = n;
-      return this.r.navigateByUrl('/');
+        this.userModel = n;
+        this.cookieService.setCookie('UserToken', JSON.stringify(n), 1);
+        this.r.navigateByUrl('/');
     }, (err) => {
-      console.log(err);
+      Swal.fire('Login', err);
     });
   }
 

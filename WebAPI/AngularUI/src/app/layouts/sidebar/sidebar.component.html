@@ -31,6 +31,9 @@
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'jokes'}">
               <a [routerLink]="['/jokes']"><i class="icon-layers"></i><span>Jokes</span></a>
             </li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'search'}">
+              <a [routerLink]="['/search']"><i class="icon-layers"></i><span>Search</span></a>
+            </li>
           </ul>
         </nav>
       </div>

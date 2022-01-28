@@ -1,10 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-WebAPI-C3002DF1-A073-4CE5-BD3D-0F9AB0AC98B9</UserSecretsId>
     <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AngularUI\dist\**" />
+    <Content Remove="AngularUI\dist\**" />
+    <EmbeddedResource Remove="AngularUI\dist\**" />
+    <None Remove="AngularUI\dist\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />

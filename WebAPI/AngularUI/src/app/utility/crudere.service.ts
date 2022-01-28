@@ -5,33 +5,37 @@ import {catchError, map, shareReplay, tap} from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import {UrlService} from '../services/url.service';
 import {ToastrService} from 'ngx-toastr';
-import {NgxSpinnerService} from 'ngx-spinner';
 import {IUserModel, SessionData} from '../iModels/iuser-model';
 import {CookieService} from './guards/cookie.service';
 import {Router} from '@angular/router';
 import {EventService} from '../services/event.service';
+import {AuthService} from './guards/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export abstract class CrudereService {
+  identityUser: SessionData;
+  userToken = this.authService.currentToken();
   httpOptions = {
     headers: new HttpHeaders({
+      Authorization: `Bearer ${this.userToken.token}`,
       'Content-Type': 'application/json',
       Accept: '*/*',
     }),
     params: new HttpParams(),
   };
-  identityUser: SessionData;
 
   protected constructor(
     protected httpCli: HttpClient,
     private n: EventService,
     private router: Router,
     private toastr: ToastrService,
+    private authService: AuthService,
     private cookie: CookieService
-  ) { }
+  ) {
+  }
 
   Identity(): IUserModel {
     const currentUser = JSON.parse(this.cookie.getCookie('UserToken'));

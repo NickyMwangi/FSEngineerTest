@@ -12,7 +12,7 @@ import {IJokes} from '../../iModels/ijokes';
   templateUrl: './jokes.component.html',
   styleUrls: ['./jokes.component.scss']
 })
-export class JokesComponent  extends BaseCrudComponent<IJokes> implements OnInit  {
+export class JokesComponent extends BaseCrudComponent<IJokes> implements OnInit  {
   ModelName = IJokes;
   category: string;
   @Input() Editable = true;

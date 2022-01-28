@@ -1,1 +1,47 @@
-<p>menus works!</p>
+<div class="container-fluid">
+  <app-title title="Search" ItemName="Home" ActiveItem="People & Jokes Search"></app-title>
+  <div class="row clearfix">
+    <input type="text"  autocapitalize="off" autocomplete="off" name="search" class="form-control"
+           placeholder="Search here" (input)="OnSearch($event)">
+    <div class="col-md-6">
+      <h5>People Listing</h5>
+      <div class="col-sm-12 mb-1" *ngFor="let dt of People$|async">
+        <div class="card">
+          <div class="body">
+            <div class="row">
+              <div class="col-7">
+                <h5 class="m-t-0">{{dt.Name}}</h5>
+                <small class="text-small">{{dt.HomeWorld}}</small>
+              </div>
+              <div class="col-5 text-right">
+                <h2 class="m-b-0"><i class="fa fa-user"></i></h2>
+                <small class="info">{{dt.Gender}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h5>Jokes Listing</h5>
+      <div class="col-md-12 mb-1" *ngFor="let dt of Jokes$|async">
+        <div class="card">
+          <div class="body">
+            <div class="row">
+              <div class="col-7">
+                <h5 class="m-t-0">{{dt.Code}}</h5>
+                <small class="text-small">{{dt.Description}}</small><br />
+                <small class="text-small"><a href="{{dt.Url}}" target="_blank"> More details</a></small>
+              </div>
+              <div class="col-5 text-right">
+                <h2 class="m-b-0"><i class="{{dt.Icon}}"></i></h2>
+                <small class="info">{{dt.JokeCategoryDescription}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
