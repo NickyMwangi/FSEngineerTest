@@ -22,6 +22,5 @@ _loads all the jokes in a particular category_
 * Run the API from Visual Studio
 * Run AngularUI using ng serve and open your project.
 # Access
-Login using 
-* _username_: Nickson@test.com
-* _Password_: 123456
+Provided in the email
+Url: https://sovtechtaskspa.azurewebsites.net/
