@@ -15,10 +15,6 @@ namespace Core.Entities
             AspNetUserRoles = new HashSet<AspNetUserRole>();
             AspNetUserTokens = new HashSet<AspNetUserToken>();
         }
-        [StringLength(128)]
-        public string ProfileId { get; set; }
-        [StringLength(128)]
-        public string UniveristyId { get; set; }
         [StringLength(256)]
         public string UserName { get; set; }
         [StringLength(256)]
@@ -32,11 +28,6 @@ namespace Core.Entities
         public string Firstname { get; set; }
         [StringLength(50)]
         public string Lastname { get; set; }
-        [StringLength(128)]
-        public string IdPassport { get; set; }
-        [StringLength(128)]
-        public string Gender { get; set; }
-        public bool? IsActive { get; set; }
         [StringLength(256)]
         public string NormalizedUserName { get; set; }
         [StringLength(256)]

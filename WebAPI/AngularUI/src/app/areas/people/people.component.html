@@ -1,1 +1,21 @@
-<p>people works!</p>
+<div class="container-fluid">
+  <app-title title="People Listing" ItemName="Home" ActiveItem="People List"></app-title>
+  <div class="row clearfix">
+    <div class="col-lg-4 col-md-4 col-sm-6 mb-1" *ngFor="let dt of listData">
+      <div class="card">
+        <div class="body">
+          <div class="row">
+            <div class="col-7">
+              <h5 class="m-t-0">{{dt.Name}}</h5>
+              <small class="text-small">{{dt.HomeWorld}}</small>
+            </div>
+            <div class="col-5 text-right">
+              <h2 class="m-b-0"><i class="fa fa-user"></i></h2>
+              <small class="info">{{dt.Gender}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

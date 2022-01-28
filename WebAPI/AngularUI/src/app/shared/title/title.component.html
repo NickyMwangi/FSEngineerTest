@@ -6,8 +6,8 @@
         <i class="fa fa-arrow-right" *ngIf="!sidebarVisible"></i>
       </a> {{title}}</h2>
       <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a [routerLink]="['/profile']"><i class="icon-user"></i></a></li>
-        <li class="breadcrumb-item">{{ItemName}}</li>
+        <li class="breadcrumb-item"><a [routerLink]="['/']"><i class="icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/']">{{ItemName}}</a></li>
         <li class="breadcrumb-item active">{{ActiveItem}}</li>
       </ul>
     </div>

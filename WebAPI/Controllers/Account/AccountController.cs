@@ -101,8 +101,8 @@ namespace API.Controllers.Account
                         FirstName = model.FirstName,
                         LastName = model.LastName,
                         PhoneNumber = model.MobileNo,
-                        Gender = model.Gender,
-                        IsActive = true
+                        //Gender = model.Gender,
+                        //IsActive = true
                     };
                     string host = HttpContext.Request.Host.Value;
 
@@ -113,12 +113,12 @@ namespace API.Controllers.Account
                         {
                             //await SendEmailConfirmationLink(user, model.ClientURI);
                         }
-                        await _userManager.AddToRoleAsync(user, "Applicant");
+                        await _userManager.AddToRoleAsync(user, "Developer");
                         return Ok(new
                         {
                             message = "Registration Successful. Check your email to confirm",
                             model.Email,
-                            user.ProfileId,
+                            user.Id,
                             success = true
                         });
                     }

@@ -9,8 +9,11 @@ namespace WebAPI.Models.SovTask
     {
         #region fields
         //public string JokeId { get; set; }
-        //public string Code { get; set; }
+        public string Code { get; set; }
         public string Description { get; set; }
+        #endregion
+        #region lists
+        public IEnumerable<JokesDto> Jokes { get; set; }
         #endregion
 
     }

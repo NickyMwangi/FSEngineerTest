@@ -6,3 +6,9 @@ export class IUserModel extends  IBase{
   ConfirmPassword?: string;
   token?: string;
 }
+
+export class SessionData {
+  user: IUserModel;
+  token?: string;
+  success?: boolean;
+}

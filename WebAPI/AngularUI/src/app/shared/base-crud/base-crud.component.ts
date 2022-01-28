@@ -15,19 +15,12 @@ import {IUserModel} from '../../iModels/iuser-model';
   styles: []
 })
 
-export abstract class BaseCrudComponent<T extends IBase> implements OnInit, OnDestroy {
-  // dtTrigger: Subject<any> = new Subject<any>();
-  // @ViewChild(DataTableDirective, { static: false })
-  // dtElement: DataTableDirective;
-  // dtOptions: any = { destroy: true, processing: true, responsive: true };
+export abstract class BaseCrudComponent<T extends IBase> implements OnInit {
   ProfileId: string;
-  UnivId: string;
-  ProfileName: string;
   SOURCE_URL: string;
   ModelName: any;
   listData: T[] = null;
   TForm: FormGroup;
-  unsubscribeAll: Subject<any>;
 
   protected constructor(public crud: CrudereService, public modalService: NgbModal, public router: Router,
                         public activeRoute: ActivatedRoute, public toastr: ToastrService
@@ -38,17 +31,6 @@ export abstract class BaseCrudComponent<T extends IBase> implements OnInit, OnDe
     this.index();
     this.initForm();
   }
-
-  // ngAfterViewInit(): void {
-  //   this.dtTrigger.next();
-  // }
-
-  // rerender(): void {
-  //   this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
-  //     dtInstance.destroy();
-  //     this.dtTrigger.next();
-  //   });
-  // }
 
   getProfileId() {
     const curr: IUserModel = this.crud.Identity();
@@ -61,7 +43,6 @@ export abstract class BaseCrudComponent<T extends IBase> implements OnInit, OnDe
   defaultIndex() {
     this.crud.readObs('', this.SOURCE_URL).pipe(map((n: T[]) => n)).subscribe((i: T[]) => {
       this.listData = i;
-      // this.rerender();
     });
   }
   abstract index();
@@ -162,10 +143,5 @@ export abstract class BaseCrudComponent<T extends IBase> implements OnInit, OnDe
         Swal.fire('Cancelled', 'Delete terminated :)', 'error');
       }
     });
-  }
-
-  ngOnDestroy(): void {
-    // this.dtTrigger.unsubscribe();
-    // this.unsubscribeAll.unsubscribe();
   }
 }

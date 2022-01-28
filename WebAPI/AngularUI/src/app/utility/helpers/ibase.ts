@@ -1,5 +1,5 @@
 export class IBase {
-  id?: string;
+  Id?: string;
   success?: string;
   message?: string;
   CreatedOn?: string;

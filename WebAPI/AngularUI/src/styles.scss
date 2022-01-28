@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
+@import '~ngx-toastr/toastr-bs4-alert';
+
+.table th, .table td {
+  padding: 0.25rem !important;
+}
+.table th {
+  font-weight: 600 !important;
+}
+.cwidget-scroll{
+  height: 260px;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidebar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+.sidebar::-webkit-scrollbar, .cwidget-scroll::-webkit-scrollbar { /* WebKit */
+  width: 0px;
+}
+.parsley-errors-list {
+  list-style-type: none;
+  line-height: 0.9em;
+  padding-left: 5px;
+}
+.form-control,.custom-file-input{
+  height:auto;
+}
+
+.modal-footer{
+  justify-content: center !important;
+  padding: 0 !important;
+}

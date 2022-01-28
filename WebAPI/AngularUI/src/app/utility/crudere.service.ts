@@ -4,77 +4,96 @@ import {Observable, Subject, throwError} from 'rxjs';
 import {catchError, map, shareReplay, tap} from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import {UrlService} from '../services/url.service';
-import {AngularFirestore} from '@angular/fire/firestore';
-import {IUserModel} from '../iModels/iuser-model';
 import {ToastrService} from 'ngx-toastr';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {IUserModel, SessionData} from '../iModels/iuser-model';
+import {CookieService} from './guards/cookie.service';
+import {Router} from '@angular/router';
+import {EventService} from '../services/event.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export abstract class CrudereService {
-   protected constructor(protected httpCli: HttpClient, private n: UrlService,
-                         private db: AngularFirestore, private toaster: ToastrService, private sp: NgxSpinnerService) { }
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      Accept: '*/*',
+    }),
+    params: new HttpParams(),
+  };
+  identityUser: SessionData;
 
-  Insert<T>(model: T | any, path?: string){
-     this.sp.show();
-     return this.db.collection(path).add(model).then((n: T[] | any) => {
-      this.toaster.success('Saved Successfully', 'Success');
-      this.sp.hide();
-      return n;
-    }).catch(this.n.handlePostError);
+  protected constructor(
+    protected httpCli: HttpClient,
+    private n: EventService,
+    private router: Router,
+    private toastr: ToastrService,
+    private cookie: CookieService
+  ) { }
+
+  Identity(): IUserModel {
+    const currentUser = JSON.parse(this.cookie.getCookie('UserToken'));
+    if (currentUser) {
+      this.identityUser = currentUser;
+    }
+    return this.identityUser?.user;
   }
 
-  Get<T>(path?: string | any, OrderValue?: string): Observable<any> {
-    // this.sp.show();
-    return this.db.collection<T>(path, ref => ref.orderBy(OrderValue)).snapshotChanges().pipe(map(actions => {
-        return actions.map(a => {
-          const data = a.payload.doc.data() as T;
-          const id = a.payload.doc.id;
-          // this.sp.hide();
-          return { id, ...data };
-        }, catchError(this.n.handleHttpError));
-      }, catchError(this.n.handleHttpError))
+  createObs<T>(model: T | any, objToCreate?: T | any, path?: string): Observable<T | T[]> {
+    const newModelObj = new model(objToCreate);
+    const body = JSON.stringify(objToCreate);
+    return this.httpCli.post<T[]>(path, body, this.httpOptions).pipe(
+      tap((res: T[] | any) => {
+        Swal.fire('Saving Successful', 'Details Saved Successfully', 'success');
+        newModelObj.key = res.key || res.ObjectId || res.id || '';
+      }),
+      catchError(this.n.handlePostError)
+    );
+  }
+  readObs<T>(query?: HttpParams | string | any, path?: string | any): Observable<T> {
+    const httpOpts = Object.assign({}, this.httpOptions);
+    if (query) {
+      httpOpts.params = this.n.createSearchParams(query);
+    }
+    return this.httpCli.get<T>(path, httpOpts).pipe(
+      tap((m: T) => m),
+      shareReplay(),
+      catchError(this.n.handleHttpError)
+    );
+  }
+  updateObs<T>(
+    model: T | any,
+    objToUpdate?: T | any,
+    path?: string
+  ): Observable<T | T[]> {
+    const body = JSON.stringify(objToUpdate);
+    const newModelObj = new model(objToUpdate);
+    return this.httpCli.put<T[]>(path, body, this.httpOptions).pipe(
+      tap((res: T[] | any) => {
+        Swal.fire(
+          'Saving Successful',
+          'Details updated Successfully',
+          'success'
+        );
+        newModelObj.key = res.key || res.ObjectId || res.id || '';
+      }),
+      catchError(this.n.handlePostError)
     );
   }
 
-  GetByValue<T>(path?: string | any, field?: string | any, value?: string | any): Observable<any> {
-    return this.db.collection<T>(path, ref => ref.where(field, '==', value)).snapshotChanges().pipe(
-      map(actions => {
-        return actions.map(a => {
-          const data = a.payload.doc.data() as T;
-          const id = a.payload.doc.id;
-          return { id, ...data };
-        }, catchError(this.n.handleHttpError));
-      }, catchError(this.n.handleHttpError))
+  Delete<T>(path: string): Observable<T[]> {
+    return this.httpCli.delete<T[]>(path, this.httpOptions);
+  }
+
+  whereObs<T>(exp?: string | any, url?: string | any): Observable<T> {
+    const Opts = Object.assign({}, this.httpOptions);
+    return this.httpCli.get<T>(url + exp + '/filtered', Opts).pipe(
+      tap((m: T) => m),
+      shareReplay(),
+      catchError(this.n.handleHttpError)
     );
   }
 
-  Update<T>(model: T | any, path?: string, bol?: boolean){
-    this.sp.show();
-    return this.db.collection(path).doc(model.Id).update(model)
-      .then((n: T[] | any) => {  if (!bol) {this.toaster.success('updated Successfully', 'Success');} this.sp.hide(); })
-      .catch(this.n.handlePostError);
-  }
-
-  Delete<T>(id: string, path: string){
-    Swal.fire({
-      title: 'Are you sure want to Delete?',
-      text: 'You will not be able to recover this data!',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, keep it'
-    }).then((result) => {
-      if (result.value) {
-        this.db.collection(path).doc(id).delete().then((n: T[] | any) => {
-          Swal.fire('Deleted!', 'Delete Successfull', 'success');
-        }).catch(this.n.handleHttpError);
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelled', 'Delete failed :)', 'error');
-      }
-    });
-
-  }
 }

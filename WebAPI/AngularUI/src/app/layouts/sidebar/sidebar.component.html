@@ -22,27 +22,15 @@
       <div class="tab-pane" id="menu" [ngClass]="{'active':navTab == 'menu' || !navTab}">
         <nav id="left-sidebar-nav" class="sidebar-nav">
           <ul id="main-menu" class="metismenu">
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'profile'}">
-              <a [routerLink]="['/profile']"><i class="icon-home"></i><span>Profile</span></a>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'category'}">
+              <a [routerLink]="['/category']"><i class="icon-basket"></i><span>Category</span></a>
             </li>
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'appraisal'}">
-              <a [routerLink]="['/appraisal']"><i class="icon-home"></i><span>Appraisal</span></a>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'people'}">
+              <a [routerLink]="['/people']"><i class="icon-users"></i><span>People</span></a>
             </li>
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'setups'}">
-              <a class="has-arrow" (click)="activeInactiveMenu('setups')"><i class="icon-grid"></i> <span>Setup</span></a>
-              <ul *ngIf="currentActiveMenu == 'setups'">
-                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/setups/goals']">Goals</a></li>
-                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/setups/stages']">Appraisal Stages</a></li>
-              </ul>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'jokes'}">
+              <a [routerLink]="['/jokes']"><i class="icon-layers"></i><span>Jokes</span></a>
             </li>
-<!--            <li [ngClass]="{'active':currentActiveMenu == 'admin'}">-->
-<!--              <a class="has-arrow" (click)="activeInactiveMenu('admin')"><i class="icon-globe"></i>-->
-<!--                <span>Administration</span></a>-->
-<!--              <ul *ngIf="currentActiveMenu == 'admin'">-->
-<!--                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/admin/users']">Users</a></li>-->
-<!--                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/admin/menus']">Menus</a></li>-->
-<!--              </ul>-->
-<!--            </li>-->
           </ul>
         </nav>
       </div>
@@ -87,45 +75,6 @@
           </li>
         </ul>
         <hr>
-        <h6>General Settings</h6>
-        <ul class="setting-list list-unstyled">
-          <li>
-            <label class="fancy-checkbox">
-              <input type="checkbox" name="checkbox">
-              <span>Report Panel Usag</span>
-            </label>
-          </li>
-          <li>
-            <label class="fancy-checkbox">
-              <input type="checkbox" name="checkbox" checked>
-              <span>Email Redirect</span>
-            </label>
-          </li>
-          <li>
-            <label class="fancy-checkbox">
-              <input type="checkbox" name="checkbox" checked>
-              <span>Notifications</span>
-            </label>
-          </li>
-          <li>
-            <label class="fancy-checkbox">
-              <input type="checkbox" name="checkbox">
-              <span>Auto Updates</span>
-            </label>
-          </li>
-          <li>
-            <label class="fancy-checkbox">
-              <input type="checkbox" name="checkbox">
-              <span>Offline</span>
-            </label>
-          </li>
-          <li>
-            <label class="fancy-checkbox">
-              <input type="checkbox" name="checkbox">
-              <span>Location Permission</span>
-            </label>
-          </li>
-        </ul>
       </div>
     </div>
   </div>

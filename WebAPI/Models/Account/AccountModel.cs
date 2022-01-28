@@ -12,7 +12,6 @@ namespace WebAPI.Models.Account
         {
             public string Email { get; set; }
             public string Password { get; set; }
-            [Required]
             public string ClientURI { get; set; }
         }
 

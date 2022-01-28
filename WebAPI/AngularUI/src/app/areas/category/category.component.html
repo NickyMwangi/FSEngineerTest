@@ -1,1 +1,21 @@
-<p>category works!</p>
+<div class="container-fluid">
+  <app-title title="List of Categories" ItemName="Home" ActiveItem="List of Categories"></app-title>
+  <div class="row clearfix">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-1" *ngFor="let dt of listData">
+      <a class="card" routerLink="/jokes/{{dt.Id}}">
+        <div class="body">
+          <div class="row">
+            <div class="col-7">
+              <h5 class="m-t-0">{{dt.Code}}</h5>
+              <small class="text-small">{{dt.Description}}</small>
+            </div>
+            <div class="col-5 text-right">
+              <h2 class="m-b-0">{{dt.Jokes.length}}</h2>
+              <small class="info">Jokes</small>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

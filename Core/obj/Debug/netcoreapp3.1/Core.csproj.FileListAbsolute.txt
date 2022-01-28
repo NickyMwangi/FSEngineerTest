@@ -3,7 +3,6 @@ F:\Lessons\SovTechTask\Core\bin\Debug\netcoreapp3.1\Core.runtimeconfig.json
 F:\Lessons\SovTechTask\Core\bin\Debug\netcoreapp3.1\Core.runtimeconfig.dev.json
 F:\Lessons\SovTechTask\Core\bin\Debug\netcoreapp3.1\Core.dll
 F:\Lessons\SovTechTask\Core\bin\Debug\netcoreapp3.1\Core.pdb
-F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.csproj.AssemblyReference.cache
 F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.GeneratedMSBuildEditorConfig.editorconfig
 F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
 F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
@@ -11,3 +10,4 @@ F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInput
 F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.dll
 F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.pdb
 F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.genruntimeconfig.cache
+F:\Lessons\SovTechTask\Core\obj\Debug\netcoreapp3.1\Core.csproj.AssemblyReference.cache

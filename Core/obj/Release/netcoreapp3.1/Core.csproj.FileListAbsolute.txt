@@ -1,0 +1,13 @@
+F:\Lessons\SovTechTask\Core\bin\Release\netcoreapp3.1\Core.deps.json
+F:\Lessons\SovTechTask\Core\bin\Release\netcoreapp3.1\Core.runtimeconfig.json
+F:\Lessons\SovTechTask\Core\bin\Release\netcoreapp3.1\Core.runtimeconfig.dev.json
+F:\Lessons\SovTechTask\Core\bin\Release\netcoreapp3.1\Core.dll
+F:\Lessons\SovTechTask\Core\bin\Release\netcoreapp3.1\Core.pdb
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.csproj.AssemblyReference.cache
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.AssemblyInfo.cs
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.dll
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.pdb
+F:\Lessons\SovTechTask\Core\obj\Release\netcoreapp3.1\Core.genruntimeconfig.cache

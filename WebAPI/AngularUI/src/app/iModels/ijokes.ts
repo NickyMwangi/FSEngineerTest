@@ -6,4 +6,5 @@ export class IJokes extends IBase{
   Description: string;
   Url: string;
   Icon: string;
+  JokeCategoryDescription: string;
 }

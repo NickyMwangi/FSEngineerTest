@@ -14,8 +14,8 @@ namespace WebAPI.Models.SovTask
         public string Url { get; set; }
         public string Icon { get; set; }
         #endregion
-        #region lists
-        public IEnumerable<CategoryDto> Categories { get; set; }
+        #region references
+        public string JokeCategoryDescription { get; set; }
         #endregion
     }
 }

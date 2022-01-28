@@ -23,12 +23,12 @@
                   <span>Remember me</span>
                 </label>
               </div>
-              <button type="submit" class="btn btn-primary btn-block" (click)="auth.logIn(f.email.value, f.password.value, loginForm)">Login</button>
-              <div class="bottom">
-								<span class="helper-text m-b-10"><i class="fa fa-lock"></i>&nbsp;<a [routerLink]="['/account/reset-password']">Forgot
-										password?</a></span>
-                <span>Don't have an account? <a [routerLink]="['/account/register']">Register</a></span>
-              </div>
+              <button type="submit" class="btn btn-primary btn-block" (click)="auth.login(f.email.value, f.password.value)">Login</button>
+<!--              <div class="bottom">-->
+<!--								<span class="helper-text m-b-10"><i class="fa fa-lock"></i>&nbsp;<a [routerLink]="['/account/reset-password']">Forgot-->
+<!--										password?</a></span>-->
+<!--                <span>Don't have an account? <a [routerLink]="['/account/register']">Register</a></span>-->
+<!--              </div>-->
             </form>
           </div>
         </div>

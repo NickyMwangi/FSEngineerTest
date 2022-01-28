@@ -35,7 +35,7 @@ export class EventService {
   // Account Urls
   get LOGIN_URL(): string { return this.API_URL + 'Account/Login/'; }
   // Areas Urls
-  get JokesURL(): string { return this.API_URL + 'jokes'; }
+  get JokesURL(): string { return this.API_URL + 'jokes/'; }
   get CategoryURL(): string { return this.API_URL + 'jokes/category/'; }
   get PeopleURL(): string { return this.API_URL + 'api/people/'; }
 

@@ -45,10 +45,10 @@ export class LayoutsComponent implements AfterViewInit, OnInit, OnDestroy  {
   ngOnInit(): void {
   }
 
-  ngOnDestroy() {
+  ngOnDestroy = () => {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
-  }
+  };
 
   toggleNotificationDropMenu() {
     this.showNotifMenu = !this.showNotifMenu;
@@ -56,15 +56,13 @@ export class LayoutsComponent implements AfterViewInit, OnInit, OnDestroy  {
 
   toggleSettingDropMenu() {
     this.showToggleMenu = !this.showToggleMenu;
-  }
+  };
 
   ngAfterViewInit() {
     const that = this;
-    // tslint:disable-next-line:only-arrow-functions
-    setTimeout(function() {
+    setTimeout(() => {
       that.isStopLoading = true;
     }, 1000);
-
   }
 
   getActiveRoutes() {
