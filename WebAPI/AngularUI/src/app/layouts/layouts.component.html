@@ -1,0 +1,16 @@
+<!-- Page Loader -->
+<div class="body {{themeClass}} {{smallScreenMenu}} {{darkClass}}">
+  <app-loader *ngIf="!isStopLoading"></app-loader>
+  <div id="wrapper" *ngIf="isStopLoading">
+    <app-topbar [showNotifMenu]="showNotifMenu" [showToggleMenu]="showToggleMenu" [darkClass]="darkClass"
+                (toggleSettingDropMenuEvent)="toggleSettingDropMenu()"
+                (toggleNotificationDropMenuEvent)="toggleNotificationDropMenu()"></app-topbar>
+
+    <app-sidebar [sidebarVisible]="themeService.sidebarVisible" [navTab]="navTab"
+                 [currentActiveMenu]="currentActiveMenu" [currentActiveSubMenu]="currentActiveSubMenu"
+                 (activeInactiveMenuEvent)="activeInactiveMenu($event)"></app-sidebar>
+    <div id="main-content" [ngClass]="{'layout-fullwidth':!themeService.sidebarVisible}">
+      <router-outlet (activate)="getActiveRoutes()"></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+<div id="left-sidebar" class="sidebar" *ngIf="sidebarVisible" style="overflow-y:scroll;">
+  <div class="sidebar-scroll">
+    <div class="user-account">
+      <img src="assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+      <div class="dropdown" ngbDropdown>
+        <span>Welcome</span>
+        <ul class="dropdown-menu dropdown-menu-right account" ngbDropdownMenu>
+          <li><a [routerLink]="['/profile']"><i class="icon-user"></i>My Profile</a></li>
+          <li><a (click)="auth.logout()"><i class="icon-power"></i>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link" [ngClass]="{'active':navTab == 'menu'}" (click)="changeNavTab('menu')">Menu</a></li>
+      <li class="nav-item"><a class="nav-link" [ngClass]="{'active':navTab == 'setting'}" (click)="changeNavTab('setting')"><i
+        class="icon-settings"></i></a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content p-l-0 p-r-0">
+      <div class="tab-pane" id="menu" [ngClass]="{'active':navTab == 'menu' || !navTab}">
+        <nav id="left-sidebar-nav" class="sidebar-nav">
+          <ul id="main-menu" class="metismenu">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'profile'}">
+              <a [routerLink]="['/profile']"><i class="icon-home"></i><span>Profile</span></a>
+            </li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'appraisal'}">
+              <a [routerLink]="['/appraisal']"><i class="icon-home"></i><span>Appraisal</span></a>
+            </li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'active':currentActiveMenu == 'setups'}">
+              <a class="has-arrow" (click)="activeInactiveMenu('setups')"><i class="icon-grid"></i> <span>Setup</span></a>
+              <ul *ngIf="currentActiveMenu == 'setups'">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/setups/goals']">Goals</a></li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/setups/stages']">Appraisal Stages</a></li>
+              </ul>
+            </li>
+<!--            <li [ngClass]="{'active':currentActiveMenu == 'admin'}">-->
+<!--              <a class="has-arrow" (click)="activeInactiveMenu('admin')"><i class="icon-globe"></i>-->
+<!--                <span>Administration</span></a>-->
+<!--              <ul *ngIf="currentActiveMenu == 'admin'">-->
+<!--                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/admin/users']">Users</a></li>-->
+<!--                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/admin/menus']">Menus</a></li>-->
+<!--              </ul>-->
+<!--            </li>-->
+          </ul>
+        </nav>
+      </div>
+      <div class="tab-pane p-l-15 p-r-15" id="setting" [ngClass]="{'active':navTab == 'setting'}">
+        <h6>Choose Mode</h6>
+        <ul class="choose-skin list-unstyled">
+          <li data-theme="white" [ngClass]="{'active':darkClass == ''}" (click)="changeDarkMode('')">
+            <div class="white"></div>
+            <span>Light</span>
+          </li>
+          <li data-theme="black" [ngClass]="{'active':darkClass == 'full-dark'}" (click)="changeDarkMode('full-dark')">
+            <div class="black"></div>
+            <span>Dark</span>
+          </li>
+        </ul>
+        <hr>
+        <h6>Choose Skin</h6>
+        <ul class="choose-skin list-unstyled">
+          <li data-theme="purple" [ngClass]="{'active':themeClass == 'theme-purple'}" (click)="changeTheme('theme-purple')">
+            <div class="purple"></div>
+            <span>Purple</span>
+          </li>
+          <li data-theme="blue" [ngClass]="{'active':themeClass == 'theme-blue'}" (click)="changeTheme('theme-blue')">
+            <div class="blue"></div>
+            <span>Blue</span>
+          </li>
+          <li data-theme="cyan" [ngClass]="{'active':themeClass == 'theme-cyan'}" (click)="changeTheme('theme-cyan')">
+            <div class="cyan"></div>
+            <span>Cyan</span>
+          </li>
+          <li data-theme="green" [ngClass]="{'active':themeClass == 'theme-green'}" (click)="changeTheme('theme-green')">
+            <div class="green"></div>
+            <span>Green</span>
+          </li>
+          <li data-theme="orange" [ngClass]="{'active':themeClass == 'theme-orange'}" (click)="changeTheme('theme-orange')">
+            <div class="orange"></div>
+            <span>Orange</span>
+          </li>
+          <li data-theme="blush" [ngClass]="{'active':themeClass == 'theme-blush'}" (click)="changeTheme('theme-blush')">
+            <div class="blush"></div>
+            <span>Blush</span>
+          </li>
+        </ul>
+        <hr>
+        <h6>General Settings</h6>
+        <ul class="setting-list list-unstyled">
+          <li>
+            <label class="fancy-checkbox">
+              <input type="checkbox" name="checkbox">
+              <span>Report Panel Usag</span>
+            </label>
+          </li>
+          <li>
+            <label class="fancy-checkbox">
+              <input type="checkbox" name="checkbox" checked>
+              <span>Email Redirect</span>
+            </label>
+          </li>
+          <li>
+            <label class="fancy-checkbox">
+              <input type="checkbox" name="checkbox" checked>
+              <span>Notifications</span>
+            </label>
+          </li>
+          <li>
+            <label class="fancy-checkbox">
+              <input type="checkbox" name="checkbox">
+              <span>Auto Updates</span>
+            </label>
+          </li>
+          <li>
+            <label class="fancy-checkbox">
+              <input type="checkbox" name="checkbox">
+              <span>Offline</span>
+            </label>
+          </li>
+          <li>
+            <label class="fancy-checkbox">
+              <input type="checkbox" name="checkbox">
+              <span>Location Permission</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
