@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = Core
-build_property.ProjectDir = F:\Lessons\SovTechTask\Core\
+build_property.ProjectDir = D:\Lessons\FSEngineerTest\Core\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Lessons\\SovTechTask\\WebAPI\\WebAPI.csproj": {}
+    "D:\\Lessons\\FSEngineerTest\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "F:\\Lessons\\SovTechTask\\Core\\Core.csproj": {
+    "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Lessons\\SovTechTask\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "F:\\Lessons\\SovTechTask\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "F:\\Lessons\\SovTechTask\\Core\\obj\\",
+        "projectPath": "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Nicky\\.nuget\\packages\\",
+        "outputPath": "D:\\Lessons\\FSEngineerTest\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicky\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -81,33 +84,45 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Lessons\\SovTechTask\\Infra\\Infra.csproj": {
+    "D:\\Lessons\\FSEngineerTest\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Lessons\\SovTechTask\\Infra\\Infra.csproj",
+        "projectUniqueName": "D:\\Lessons\\FSEngineerTest\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "F:\\Lessons\\SovTechTask\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "F:\\Lessons\\SovTechTask\\Infra\\obj\\",
+        "projectPath": "D:\\Lessons\\FSEngineerTest\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\Nicky\\.nuget\\packages\\",
+        "outputPath": "D:\\Lessons\\FSEngineerTest\\Infra\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicky\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,14 +130,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Lessons\\SovTechTask\\Core\\Core.csproj": {
-                "projectPath": "F:\\Lessons\\SovTechTask\\Core\\Core.csproj"
+              "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj": {
+                "projectPath": "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj"
               }
             }
           }
@@ -131,6 +147,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -158,33 +179,45 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Lessons\\SovTechTask\\Service\\Service.csproj": {
+    "D:\\Lessons\\FSEngineerTest\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Lessons\\SovTechTask\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\Lessons\\FSEngineerTest\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "F:\\Lessons\\SovTechTask\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "F:\\Lessons\\SovTechTask\\Service\\obj\\",
+        "projectPath": "D:\\Lessons\\FSEngineerTest\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\Nicky\\.nuget\\packages\\",
+        "outputPath": "D:\\Lessons\\FSEngineerTest\\Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicky\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -192,17 +225,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Lessons\\SovTechTask\\Core\\Core.csproj": {
-                "projectPath": "F:\\Lessons\\SovTechTask\\Core\\Core.csproj"
+              "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj": {
+                "projectPath": "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj"
               },
-              "F:\\Lessons\\SovTechTask\\Infra\\Infra.csproj": {
-                "projectPath": "F:\\Lessons\\SovTechTask\\Infra\\Infra.csproj"
+              "D:\\Lessons\\FSEngineerTest\\Infra\\Infra.csproj": {
+                "projectPath": "D:\\Lessons\\FSEngineerTest\\Infra\\Infra.csproj"
               }
             }
           }
@@ -211,6 +245,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -246,33 +285,45 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Lessons\\SovTechTask\\WebAPI\\WebAPI.csproj": {
+    "D:\\Lessons\\FSEngineerTest\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Lessons\\SovTechTask\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "D:\\Lessons\\FSEngineerTest\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "F:\\Lessons\\SovTechTask\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "F:\\Lessons\\SovTechTask\\WebAPI\\obj\\",
+        "projectPath": "D:\\Lessons\\FSEngineerTest\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Nicky\\.nuget\\packages\\",
+        "outputPath": "D:\\Lessons\\FSEngineerTest\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicky\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -280,20 +331,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Lessons\\SovTechTask\\Core\\Core.csproj": {
-                "projectPath": "F:\\Lessons\\SovTechTask\\Core\\Core.csproj"
+              "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj": {
+                "projectPath": "D:\\Lessons\\FSEngineerTest\\Core\\Core.csproj"
               },
-              "F:\\Lessons\\SovTechTask\\Infra\\Infra.csproj": {
-                "projectPath": "F:\\Lessons\\SovTechTask\\Infra\\Infra.csproj"
+              "D:\\Lessons\\FSEngineerTest\\Infra\\Infra.csproj": {
+                "projectPath": "D:\\Lessons\\FSEngineerTest\\Infra\\Infra.csproj"
               },
-              "F:\\Lessons\\SovTechTask\\Service\\Service.csproj": {
-                "projectPath": "F:\\Lessons\\SovTechTask\\Service\\Service.csproj"
+              "D:\\Lessons\\FSEngineerTest\\Service\\Service.csproj": {
+                "projectPath": "D:\\Lessons\\FSEngineerTest\\Service\\Service.csproj"
               }
             }
           }
@@ -302,6 +354,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -325,10 +382,29 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -337,7 +413,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
